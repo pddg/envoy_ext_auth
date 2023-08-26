@@ -6,3 +6,9 @@ services:
     image: hello:latest
     ports:
       - "8000:8000"
+  envoy:
+    image: envoyproxy/envoy:v1.27-latest
+    ports:
+      - "10000:10000"
+    volumes:
+      - ./etc/envoy/envoy.yaml:/etc/envoy/envoy.yaml
