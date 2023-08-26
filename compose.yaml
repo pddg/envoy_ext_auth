@@ -6,6 +6,12 @@ services:
     image: hello:latest
     ports:
       - "8000:8000"
+  authserver:
+    build: .
+    image: authserver:latest
+    command: ["/bin/authserver"]
+    ports:
+      - "8001:8001"
   envoy:
     image: envoyproxy/envoy:v1.27-latest
     ports:
