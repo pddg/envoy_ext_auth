@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  hello:
+    build: .
+    image: hello:latest
+    ports:
+      - "8000:8000"
